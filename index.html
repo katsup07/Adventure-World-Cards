@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Adventure World</title>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -39,110 +40,6 @@
     <div class="modal-outer">
         <div class="modal-inner"></div>
     </div>
-    <style>
-        html {
-            background: rgb(108, 108, 190);
-            padding: 1rem;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .heading-container {
-            display: flex;
-            flex: 1 1 auto;
-            justify-content: center;
-        }
-
-        .heading {
-            background: rgba(255, 255, 0, 0.685);
-            margin: 0.3em;
-            border: 1px solid rgb(0, 0, 0);
-            padding: 1rem;
-            font-size: 3rem;
-            border-radius: 2px;
-            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.418);
-
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-gap: 20px;
-
-        }
-
-        button {
-            background: hsla(293, 89%, 75%, 0.7);
-            font-size: 1.5rem;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            padding: 10px;
-            border-radius: 2px;
-            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.582);
-
-        }
-
-        .card {
-            background: white;
-            padding: 1rem;
-            border-radius: 2px;
-            border: 2px solid black;
-            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.548);
-
-        }
-
-        .card img {
-            width: 100%;
-        }
-
-        .card h2 {
-            color: black;
-        }
-
-        .modal-outer {
-            display: grid;
-            background: hsla(50, 100%, 50%, 0.7);
-            /* hue, saturation, lightness, and alpha(0 is transparent and 1 is opaque).. similarly with rgba-red, green, blue, alpha. */
-            position: fixed;
-            height: 100vh;
-            width: 100vw;
-            top: 0;
-            left: 0;
-            justify-content: center;
-            align-items: center;
-            /* Hide this modal until we need it */
-            opacity: 0;
-            /* Still there but can't see it. It will prevent interaction with the buttons on the cards */
-            pointer-events: none;
-            /*Tells the browser to ignore any events and will ignore the opacity above so can click cards  */
-            transition: opacity 0.5s;
-        }
-
-        .modal-outer img {
-            width: 100%;
-        }
-
-        /* Show this modal when we need it */
-        .modal-outer.open {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .modal-inner {
-            max-width: 600px;
-            min-width: 400px;
-            padding: 1.5rem;
-            border-radius: 5px;
-            border: 1px solid grey;
-            min-height: 200px;
-            background: white;
-            transform: translateY(-200%);
-            transition: transform 2s;
-            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.438);
-        }
-
-        .modal-outer.open .modal-inner {
-            transform: translateY(0);
-        }
-    </style>
     <script src="cards.js"></script>
 </body>
 
